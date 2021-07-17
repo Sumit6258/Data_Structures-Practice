@@ -43,7 +43,7 @@ int main()
     cout << "Enter key element to find: ";
     cin >> key;
 
-    cout << "Element " <<"\""<< key <<"\"" << " found at index " <<Binary_Search(array,size,key) << endl;
+    cout << "Element " <<"\""<< key <<"\"" << " found at index " << Binary_Search(array,size,key) << endl;
 
     return 0;
 }
