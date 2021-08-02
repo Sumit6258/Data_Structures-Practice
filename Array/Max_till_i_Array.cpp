@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    int mx = -199999999;
+    int mx = INT_FAST64_MIN;
     int size;
     cout << " Enter size of array: " ;
     cin >> size;
