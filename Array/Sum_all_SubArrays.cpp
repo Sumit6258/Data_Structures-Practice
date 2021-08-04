@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     int size;
-    cout << "Enter size of array:";
+    cout << "Enter the size of array:";
     cin >> size;
 
     int array[size];
