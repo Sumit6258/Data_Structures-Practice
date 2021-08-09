@@ -1,5 +1,13 @@
+/*
+ * Google Kickstart Round D 2020
+ * Q1. Record Breaker
+ * https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171
+ *
+ */
+
+
 //
-// Created by user on 07-08-2021.
+// Created by Sumit Suman on 09-08-2021.
 //
 
 #include <bits/stdc++.h>
