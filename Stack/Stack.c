@@ -80,8 +80,8 @@ int main()
     push(s,3);//3 is added on top of 2
     push(s,5);//5 is added on the top of stack
     Top(s);
-    pop(s);
-    pop(s);
+    pop(s);//5 is removed
+    pop(s);//3 is removed
     empty(s);
     //Print elements of stack
     /*
