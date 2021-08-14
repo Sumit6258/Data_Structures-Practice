@@ -12,6 +12,7 @@ struct stack {
 
     int *arr[n];
     int top;
+    
 };
 
 typedef struct stack st;
@@ -27,11 +28,14 @@ void push(st *s, int x){
         printf("Stack overflow\n");
         //return;
     }
+    
     else{
         s->top++;
         s->arr[s->top] = x;
     }
+    
     count++;
+    
 }
 
 void pop(st *s){
@@ -40,6 +44,7 @@ void pop(st *s){
         printf("No element to pop\n");
         return;
     }
+    
     else{
         s->top--;
     }
@@ -53,6 +58,7 @@ void Top(st *s){
         printf("No element to pop\n");
         //return -1;
     }
+    
     printf("%d\n",s->arr[s->top]);
     //return s->arr[s->top];
 }
@@ -79,10 +85,11 @@ int main()
     push(s, 1);//1 is added on the bottom of stack
     push(s,3);//3 is added on top of 2
     push(s,5);//5 is added on the top of stack
-    Top(s);
+    Top(s);//Print the top element of stack(element that entered last in the stack,i.e 5)
     pop(s);//5 is removed
     pop(s);//3 is removed
-    empty(s);
+    empty(s);//Prints whether the stack is empty or not
+    
     //Print elements of stack
     /*
     for (int i = 0; i < count; i++){
@@ -90,6 +97,7 @@ int main()
     }
     printf("\n");
     */
+    
     return 0;
 }
 
