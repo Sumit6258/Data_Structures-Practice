@@ -54,13 +54,13 @@ public:
 int main()
 {
     stack st;
-    st.push(1);
-    st.push(3);
-    st.push(5);
+    st.push(1); //1 is added on the bottom of stack
+    st.push(3);//3 is added on top of 2
+    st.push(5);//5 is added on the top of stack
     cout << st.Top()<<endl;
-    st.pop();
-    st.pop();
-    cout << st.empty()<<endl;
+    st.pop();//5 is removed
+    st.pop();//3 is removed
+    cout << st.empty()<<endl;//return 0 for False and 1 for true if stack is empty or not
 
     return 0;
 }
