@@ -76,9 +76,9 @@ int main()
 
     Stack(s);
 
-    push(s, 1);
-    push(s,3);
-    push(s,5);
+    push(s, 1);//1 is added on the bottom of stack
+    push(s,3);//3 is added on top of 2
+    push(s,5);//5 is added on the top of stack
     Top(s);
     pop(s);
     pop(s);
