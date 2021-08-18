@@ -16,12 +16,14 @@ void reverseSentence(string s){
             w+=s[i];
             i++;
         }
+        
         st.push(w);
     }
 
     while(!st.empty()){
         cout << st.top() << " ";
         st.pop();
+        
     }cout<<endl;
 }
 
@@ -29,6 +31,7 @@ int main()
 {
     string s = "Hey!! How are you??";
     reverseSentence(s);
+    
     return 0;
 }
 
