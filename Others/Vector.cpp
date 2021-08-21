@@ -7,13 +7,15 @@
 using namespace std;
 
 template <class V>
-void display(vector<V> &v) {
+void display(vector<V> &v) 
+{
     for(int i:v) {
         cout << i << " ";
     }cout << endl;
 }
 
-int main(){
+int main()
+{
     vector<int> v;
 
     vector<int> a(5,9);
@@ -22,11 +24,15 @@ int main(){
 
     cout << "Capacity--> "<<v.capacity()<<endl;
     v.push_back(5);
+    
     cout << "Capacity--> "<<v.capacity()<<endl;
     v.push_back(2);
+    
     cout << "Capacity--> "<<v.capacity()<<endl;
     v.push_back(3);
+    
     cout << "Capacity--> "<<v.capacity()<<endl;
+    
     cout << "Size--> "<<v.size()<<endl;
 
     cout << "Element at 2nd index--> " <<v.at(2)<<endl;
@@ -46,6 +52,7 @@ int main(){
     display(v);
 
     cout << "Before clear size--> " << v.size() << endl;
+    
     v.clear();
     cout << "After clear size--> " << v.size() << endl;
 
