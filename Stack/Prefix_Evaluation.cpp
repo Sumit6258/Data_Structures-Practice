@@ -12,7 +12,8 @@ int prefixEvaluation(string s){
         if(s[i] >= '0' && s[i] <= '9') {
             st.push(s[i] - '0');
         }
-        else{
+        else
+        {
             int op1 = st.top();
             st.pop();
             int op2 = st.top();
