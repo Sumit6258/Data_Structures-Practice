@@ -55,7 +55,7 @@ void pop(st *s){
 void Top(st *s){
 
     if(s->top == -1){
-        printf("No element to pop\n");
+        printf("Stack is empty\n");
         //return -1;
     }
     
@@ -66,11 +66,11 @@ void Top(st *s){
 int empty(st *s){
 
     if(s->top == -1){
-        printf("Empty");
+        printf("Empty\n");
         return 1;
     }
     else{
-        printf("Not Empty");
+        printf("Not Empty\n");
         return 0;
     }
 }
