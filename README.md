@@ -1,4 +1,4 @@
-<img align="left" src="https://komarev.com/ghpvc/?username=AJgthb2002&label=Profile%20views&color=129e00&style=plastic" alt="AJgthb2002" />
+<img align="left" src="https://komarev.com/ghpvc/?username=sumit6258&label=Profile%20views&color=129e00&style=plastic" alt="sumit6258" />
 
 # DSA-Practice 
 
