@@ -29,7 +29,7 @@ int main()
             {
                 if (arr[j] == key){
                     x = 1;
-                    break;
+               
                 }
             }
             if(x == 1){
