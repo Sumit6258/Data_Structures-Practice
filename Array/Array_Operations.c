@@ -3,13 +3,14 @@
 //
 
 #include <stdio.h>
+#define size 50
 
 int main()
 {
+    int arr[size];
     int i,n,j,position, value, key;
     printf("Enter size of the array:");
     scanf("%d", &n);
-    int arr[n];
 
     printf("Enter elements in the array:");
     for(i=0; i<n; i++)
@@ -24,10 +25,10 @@ int main()
     switch(a)
     {
         case 1:
-            printf("\nEnter element to find : ");
+            printf("\nEnter element to find :");
             scanf("%d", &key);
             int x = 0;
-            for(j = 0; j < n; j++)
+            for(j = 0; j < size; j++)
             {
                 if (arr[j] == key){
                     x = 1;
