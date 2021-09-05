@@ -75,15 +75,21 @@ int main()
             printf("\nEnter the position where to update an element: ");
             scanf("%d", &position);
 
-            printf("Enter the new value: ");
-            scanf("%d", &value);
+            if(position <= n && position >= 0)
+            {
+                printf("Enter the new value: ");
+                scanf("%d", &value);
 
-            arr[position - 1] = value;
+                arr[position - 1] = value;
 
-            printf("\nResultant array is\n");
+                printf("\nResultant array is\n");
 
-            for (i = 0; i < n; i++){
-                printf("%d ", arr[i]);
+                for (i = 0; i < n; i++){
+                    printf("%d ", arr[i]);
+                }
+            }
+            else{
+                printf("Invalid Position\n");
             }
             break;
         // Hello, Hi Bye!! Bye!!
