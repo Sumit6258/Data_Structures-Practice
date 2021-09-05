@@ -1,5 +1,5 @@
 //
-// Created by Preshita Bala Sahay on 04-09-2021.
+// Created by Preshita Bala Sahay on 18-08-2021.
 //
 
 #include <stdio.h>
@@ -11,6 +11,7 @@ int main()
     int i,n,j,position, value, key;
     printf("Enter size of the array:");
     scanf("%d", &n);
+
 
     printf("Enter elements in the array:");
     for(i=0; i<n; i++)
@@ -25,7 +26,7 @@ int main()
     switch(a)
     {
         case 1:
-            printf("\nEnter element to find :");
+            printf("\nEnter element to find : ");
             scanf("%d", &key);
             int x = 0;
             for(j = 0; j < size; j++)
@@ -48,19 +49,26 @@ int main()
             printf("\nEnter the location where to insert an element:");
             scanf("%d", &position);
 
-            printf("Enter the value to insert:");
-            scanf("%d", &value);
+            if(position <= n && position >= 0)
+            {
+                printf("Enter the value to insert:");
+                scanf("%d", &value);
 
-            for (i = n - 1; i >= position - 1; i--)
-                arr[i+1] = arr[i];
+                for (i = n - 1; i >= position - 1; i--)
+                    arr[i+1] = arr[i];
 
-            arr[position-1] = value;
+                arr[position-1] = value;
 
-            printf("\nResultant array is\n");
+                printf("\nResultant array is\n");
 
-            for (i = 0; i <= n; i++){
-                printf("%d ", arr[i]);
+                for (i = 0; i <= n; i++){
+                    printf("%d ", arr[i]);
+                }
             }
+            else{
+                printf("Invalid Position\n");
+            }
+
             break;
 
         case 3:
