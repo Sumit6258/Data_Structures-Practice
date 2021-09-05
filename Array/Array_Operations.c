@@ -1,5 +1,5 @@
 //
-// Created by Preshita Bala Sahay on 18-08-2021.
+// Created by Sumit Suman on 18-08-2021.
 //
 
 #include <stdio.h>
@@ -92,7 +92,6 @@ int main()
                 printf("Invalid Position\n");
             }
             break;
-        // Hello, Hi Bye!! Bye!!
 
         case 4:
             printf("\nEnter the position where to delete element: ");
