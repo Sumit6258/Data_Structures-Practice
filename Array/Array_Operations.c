@@ -1,23 +1,25 @@
 //
-// Created by Sumit Suman on 18-08-2021.
+// Created by Preshita Bala Sahay on 04-09-2021.
 //
+
 #include <stdio.h>
-#define size 50
+
 int main()
 {
-    int arr[size], position, value, key;
-    int i,n,j;
+    int i,n,j,position, value, key;
     printf("Enter size of the array:");
     scanf("%d", &n);
+    int arr[n];
 
-    printf("Enter %d elements in the array:", n);
+    printf("Enter elements in the array:");
     for(i=0; i<n; i++)
     {
         scanf("%d", &arr[i]);
     }
 
     int a;
-    printf("\n 1. Searching \n 2. Traversing \n 3. Insertion \n 4. Deletion \n");
+    printf("\n 1. Searching \n 2. Insertion \n 3. Updation \n 4. Deletion");
+    printf("\n Enter your choice:");
     scanf("%d",&a);
     switch(a)
     {
@@ -25,11 +27,11 @@ int main()
             printf("\nEnter element to find : ");
             scanf("%d", &key);
             int x = 0;
-            for(int j = 0; j < size; j++)
+            for(j = 0; j < n; j++)
             {
                 if (arr[j] == key){
                     x = 1;
-               
+                    break;
                 }
             }
             if(x == 1){
@@ -38,21 +40,14 @@ int main()
             else{
                 printf("Element not found");
             }
+            break;
+
 
         case 2:
-            printf("The array elements are:\n");
-
-            for(i = 0; i < n; i++)
-            {
-                printf("Array[%d] = %d \n", i, arr[i]);
-            }
-
-
-        case 3:
-            printf("Enter the location where you wish to insert an element\n");
+            printf("\nEnter the location where to insert an element:");
             scanf("%d", &position);
 
-            printf("Enter the value to insert\n");
+            printf("Enter the value to insert:");
             scanf("%d", &value);
 
             for (i = n - 1; i >= position - 1; i--)
@@ -60,29 +55,49 @@ int main()
 
             arr[position-1] = value;
 
-            printf("Resultant array is\n");
+            printf("\nResultant array is\n");
 
             for (i = 0; i <= n; i++){
-                printf("%d\n", arr[i]);
+                printf("%d ", arr[i]);
             }
+            break;
+
+        case 3:
+            printf("\nEnter the position where to update an element: ");
+            scanf("%d", &position);
+
+            printf("Enter the new value: ");
+            scanf("%d", &value);
+
+            arr[position - 1] = value;
+
+            printf("\nResultant array is\n");
+
+            for (i = 0; i < n; i++){
+                printf("%d ", arr[i]);
+            }
+            break;
+        // Hello, Hi Bye!! Bye!!
 
         case 4:
-            printf("\nEnter the position where to delete element : ");
+            printf("\nEnter the position where to delete element: ");
             scanf("%d", &position);
 
             if (position >= n+1){
                 printf("\nDeletion not possible.\n");
             }
+
             else
             {
                 for (i = position-1; i < n-1; i++)
                     arr[i] = arr[i+1];
 
-                printf("\nArray after deletion : ");
+                printf("\nArray after deletion is\n ");
 
                 for (i = 0; i < n-1; i++)
-                    printf("%d", arr[i]);                                                                                                                                                                                                                                                                                              //@sumit6258
+                    printf("%d ", arr[i]);                                                                                                                                                                                                                                                                                              //@sumit6258
             }
+            break;
     }
 
     return 0;
