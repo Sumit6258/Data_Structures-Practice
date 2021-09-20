@@ -6,6 +6,6 @@ Practice of general and specific questions of basic concepts to advanced level o
 
 
 ###### IDE Used:
-> CLion (https://www.jetbrains.com/clion/)
+> [CLion](https://www.jetbrains.com/clion/)
 
 
