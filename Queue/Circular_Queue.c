@@ -50,6 +50,16 @@ void display()
     }
 }
 
+void peek()
+{
+    if(front == -1 && rear == -1){
+        printf("Queue is empty");
+    }
+    else{
+        printf("%d\n", queue[front]);
+    }
+}
+
 
 int main()
 {
