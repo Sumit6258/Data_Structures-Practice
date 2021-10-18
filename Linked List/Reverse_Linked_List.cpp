@@ -104,6 +104,23 @@ bool search(node* head, int key){
     return false;
 }
 
+node* reverse(node* &head){
+    node* prevptr = NULL;
+    node* currptr = head;
+    node* nextptr;
+
+    while(currptr != NULL){
+        nextptr = currptr->next;
+        currptr->next=prevptr;
+
+        prevptr = currptr;
+        currptr = nextptr;
+
+    }
+
+    return prevptr;
+}
+
 
 int main()
 {
@@ -111,17 +128,12 @@ int main()
     insertAtTail(head, 1);
     insertAtTail(head,3);
     insertAtTail(head,5);
-    display(head);//Display all entered elements
     insertAtTail(head,7);
+
     display(head);
-    insertAthead(head,9);
-    insertAt(head,4,4);
-    display(head);
-    deletion(head,3);
-    //cout<< sumit6258 <<search(head,2);
-    display(head);
-    deleteAThead(head);
-    display(head);
+
+    node* newhead = reverse(head);
+    display(newhead);
 
     return 0;
 }
