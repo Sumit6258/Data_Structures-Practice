@@ -1,6 +1,6 @@
 //
 // Created by Sumit Suman on 17-11-2021.
-//
+//Linear Search using Recursion
 
 #include<stdio.h>
 
