@@ -1,5 +1,5 @@
 //
-// Created by Sumit Suman on 14-08-2021.
+// Created by Sumit Suman on 22-09-2021.
 //
 
 #include<stdio.h>
@@ -9,47 +9,36 @@
 int count = 0;
 
 struct stack {
-
     int *arr[n];
     int top;
-    
 };
 
 typedef struct stack st;
 
 void Stack(st *s){
-
     s->top = -1;
 }
 
 void push(st *s, int x){
-
     if(s->top == n - 1){
         printf("Stack overflow\n");
-        //return;
     }
-    
     else{
         s->top++;
         s->arr[s->top] = x;
     }
-    
     count++;
-    
 }
 
 void pop(st *s){
-
     if(s->top == -1){
         printf("No element to pop\n");
         return;
     }
-    
     else{
         s->top--;
     }
     count--;
-    //printf("\n");
 }
 
 void Top(st *s){
@@ -58,7 +47,6 @@ void Top(st *s){
         printf("Stack is empty\n");
         //return -1;
     }
-    
     printf("%d\n",s->arr[s->top]);
     //return s->arr[s->top];
 }
@@ -77,28 +65,43 @@ int empty(st *s){
 
 int main()
 {
-
     st *s = (st *)malloc(n);
-
     Stack(s);
-
-    push(s, 1);//1 is added on the bottom of stack
-    push(s,3);//3 is added on top of 2
-    push(s,5);//5 is added on the top of stack
-    Top(s);//Print the top element of stack(element that entered last in the stack,i.e 5)
-    pop(s);//5 is removed
-    pop(s);//3 is removed
-    empty(s);//Prints whether the stack is empty or not
-    
-    //Print elements of stack
-    /*
-    for (int i = 0; i < count; i++){
-        printf("%d",s->arr[i]);
+    int p1;
+    printf("1.Push \n2.Pop \n3.Top \n4.Display \n5.Exit\n");
+    int choice;
+    while(choice != 7){
+        printf("Enter your choice:");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+               printf("Enter item to push in stack:");
+               scanf("%d",&p1);
+               push(s,p1);
+               break;
+            case 2:
+                printf("Pop from stack");
+                pop(s);
+                printf("\n");
+                break;
+            case 3:
+                printf("Topmost item of stack:");
+                Top(s);
+                printf("\n");
+                break;
+            case 4:
+                printf("\nPrinting elements of Stack\n");
+                for (int i = s->top; i >= 0; i--){
+                    printf("%d\n",s->arr[i]);
+                }
+                printf("\n");
+                break;
+            case 5:
+                exit(0);
+            default:
+                printf("\nInvalid Choice");
+        }
     }
-    printf("\n");
-    */
-    
     return 0;
 }
-
 
